@@ -17,6 +17,7 @@ Frame.BackgroundTransparency = 0.200
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.366167277, 0, 0.368768156, 0)
 Frame.Size = UDim2.new(0.268811494, 0, 0.262436599, 0)
+Frame.Visible = false
 Frame.Active = true
 Frame.Draggable = true
 
