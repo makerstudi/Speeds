@@ -13,7 +13,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
 
 AnimatedGuiHamDizz.Name = "Animated Gui (HamDizz)"
-AnimatedGuiHamDizz.Parent = game.Workspace
+AnimatedGuiHamDizz.Parent = game.CoreGui
 
 Frame.Parent = AnimatedGuiHamDizz
 Frame.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
