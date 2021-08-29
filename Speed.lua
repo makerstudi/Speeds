@@ -1,4 +1,4 @@
-local AnimatedGuiHamDizz = Instance.new("ScreenGui")
+local SpeedGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Frame_2 = Instance.new("Frame")
@@ -6,21 +6,23 @@ local UICorner_2 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
 local UICorner_3 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local TextButton_2 = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
 
-AnimatedGuiHamDizz.Name = "Animated Gui (HamDizz)"
-AnimatedGuiHamDizz.Parent = game.CoreGui
+SpeedGui.Name = "SpeedGui"
+SpeedGui.Parent = game.CoreGui
 
-Frame.Parent = AnimatedGuiHamDizz
+Frame.Parent = SpeedGui
 Frame.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
 Frame.BackgroundTransparency = 0.200
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(-0.269742578, 0, 0.370844334, 0)
-Frame.Size = UDim2.new(0.269568503, 0, 0.257360458, 0)
+Frame.Position = UDim2.new(-0.270000011, 0, 0.39199999, 0)
+Frame.Size = UDim2.new(0.269568503, 0, 0.214452237, 0)
 Frame.Visible = false
 Frame.Active = true
 Frame.Draggable = true
@@ -59,11 +61,19 @@ TextButton.Text = "Set"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 40.000
 
+Frame_3.Parent = Frame_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Frame_3.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Frame_3.Position = UDim2.new(-8.68217285e-08, 0, 0, 0)
+Frame_3.Size = UDim2.new(0, 351, 0, 23)
+
+UICorner_4.Parent = Frame_3
+
 TextLabel.Parent = Frame_2
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.214285687, 0, 0, 0)
-TextLabel.Size = UDim2.new(0.570002496, 0, 0.22195214, 0)
+TextLabel.Position = UDim2.new(0.214285672, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.570002496, 0, 0.131729171, 0)
 TextLabel.Font = Enum.Font.Cartoon
 TextLabel.Text = "Speed"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -74,18 +84,18 @@ TextLabel.TextWrapped = true
 TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 84, 87)
 TextButton_2.BackgroundTransparency = 1.000
-TextButton_2.Position = UDim2.new(0.848472774, 0, -0.0413333476, 0)
-TextButton_2.Size = UDim2.new(0.116588123, 0, 0.274555206, 0)
+TextButton_2.Position = UDim2.new(0.845664442, 0, -0.0413333476, 0)
+TextButton_2.Size = UDim2.new(0.116588123, 0, 0.127830699, 0)
 TextButton_2.Font = Enum.Font.Cartoon
 TextButton_2.Text = "X"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextColor3 = Color3.fromRGB(255, 0, 0)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
 
-UICorner_4.Parent = TextButton_2
+UICorner_5.Parent = TextButton_2
 
-TextLabel_2.Parent = AnimatedGuiHamDizz
+TextLabel_2.Parent = SpeedGui
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TextLabel_2.Position = UDim2.new(-0.300999999, 0, 0.940999985, 0)
 TextLabel_2.Size = UDim2.new(0, 397, 0, 35)
@@ -95,14 +105,11 @@ TextLabel_2.Text = "turn off the ui then run the script again"
 TextLabel_2.TextColor3 = Color3.fromRGB(209, 209, 209)
 TextLabel_2.TextSize = 23.000
 TextLabel_2.TextWrapped = true
-TextLabel_2.Visible = false
 
-UICorner_5.CornerRadius = UDim.new(0, 4)
-UICorner_5.Parent = TextLabel_2
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = TextLabel_2
 
--- Scripts:
-
-local function EAUHI_fake_script() -- TextButton.LocalScript 
+local function OJMTW_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -117,8 +124,8 @@ local function EAUHI_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EAUHI_fake_script)()
-local function YJQIAZ_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(OJMTW_fake_script)()
+local function VWUYPJ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -127,65 +134,8 @@ local function YJQIAZ_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.TextButton.Text = "Set"
 	end)
 end
-coroutine.wrap(YJQIAZ_fake_script)()
-local function LANAU_fake_script() -- TextLabel.Script 
-	local script = Instance.new('Script', TextLabel)
-
-	local text = script.Parent
-	local add = 10
-	wait(1)
-	local k = 1
-	while k <= 255 do
-		text.TextColor3 = Color3.new(k/255,0/255,0/255)
-		k = k + add
-		wait()
-	end
-	while true do
-		k = 1
-		while k <= 255 do
-			text.TextColor3 = Color3.new(255/255,k/255,0/255)
-			k = k + add
-			wait()
-		end
-		k = 1
-		while k <= 255 do
-			text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
-			k = k + add
-			wait()
-		end
-		k = 1
-		while k <= 255 do
-			text.TextColor3 = Color3.new(0/255,255/255,k/255)
-			k = k + add
-			wait()
-		end
-		k = 1
-		while k <= 255 do
-			text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
-			k = k + add
-			wait()
-		end
-		k = 1
-		while k <= 255 do
-			text.TextColor3 = Color3.new(k/255,0/255,255/255)
-			k = k + add
-			wait()
-		end
-		k = 1
-		while k <= 255 do
-			text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
-			k = k + add
-			wait()
-		end
-		while k <= 255 do
-			text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
-			k = k + add
-			wait()
-		end
-	end
-end
-coroutine.wrap(LANAU_fake_script)()
-local function CHUJ_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(VWUYPJ_fake_script)()
+local function JAZYCJC_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -196,9 +146,9 @@ local function CHUJ_fake_script() -- TextButton_2.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CHUJ_fake_script)()
-local function OTLHVLX_fake_script() -- AnimatedGuiHamDizz.LocalScript 
-	local script = Instance.new('LocalScript', AnimatedGuiHamDizz)
+coroutine.wrap(JAZYCJC_fake_script)()
+local function FJKBO_fake_script() -- SpeedGui.LocalScript 
+	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.TextLabel.Visible = true
 	script.Parent.TextLabel.Position = UDim2.new(-0.301, 0,0.941, 0)
@@ -221,4 +171,4 @@ local function OTLHVLX_fake_script() -- AnimatedGuiHamDizz.LocalScript
 	wait(1)
 	script.Parent.TextLabel.Visible = false
 end
-coroutine.wrap(OTLHVLX_fake_script)()
+coroutine.wrap(FJKBO_fake_script)()
