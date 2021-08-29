@@ -14,6 +14,8 @@ local UICorner_5 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
 local UICorner_6 = Instance.new("UICorner")
 
+--Properties:
+
 SpeedGui.Name = "SpeedGui"
 SpeedGui.Parent = game.CoreGui
 
@@ -21,8 +23,8 @@ Frame.Parent = SpeedGui
 Frame.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
 Frame.BackgroundTransparency = 0.200
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(-0.270000011, 0, 0.39199999, 0)
-Frame.Size = UDim2.new(0.269568503, 0, 0.214452237, 0)
+Frame.Position = UDim2.new(-0.294999987, 0, 0.39199999, 0)
+Frame.Size = UDim2.new(0.239571959, 0, 0.214452237, 0)
 Frame.Visible = false
 Frame.Active = true
 Frame.Draggable = true
@@ -65,7 +67,7 @@ Frame_3.Parent = Frame_2
 Frame_3.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Frame_3.BorderColor3 = Color3.fromRGB(44, 44, 44)
 Frame_3.Position = UDim2.new(-8.68217285e-08, 0, 0, 0)
-Frame_3.Size = UDim2.new(0, 351, 0, 23)
+Frame_3.Size = UDim2.new(0.999012113, 0, 0.134364158, 0)
 
 UICorner_4.Parent = Frame_3
 
@@ -109,7 +111,9 @@ TextLabel_2.TextWrapped = true
 UICorner_6.CornerRadius = UDim.new(0, 4)
 UICorner_6.Parent = TextLabel_2
 
-local function OJMTW_fake_script() -- TextButton.LocalScript 
+-- Scripts:
+
+local function OODW_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -124,8 +128,8 @@ local function OJMTW_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OJMTW_fake_script)()
-local function VWUYPJ_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(OODW_fake_script)()
+local function FHYN_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -134,8 +138,8 @@ local function VWUYPJ_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.TextButton.Text = "Set"
 	end)
 end
-coroutine.wrap(VWUYPJ_fake_script)()
-local function JAZYCJC_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(FHYN_fake_script)()
+local function DPTBY_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -146,13 +150,13 @@ local function JAZYCJC_fake_script() -- TextButton_2.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JAZYCJC_fake_script)()
-local function FJKBO_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(DPTBY_fake_script)()
+local function CZRJLU_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.TextLabel.Visible = true
 	script.Parent.TextLabel.Position = UDim2.new(-0.301, 0,0.941, 0)
-	script.Parent.TextLabel:TweenPosition(UDim2.new(-0.008, 0,0.939, 0))
+	script.Parent.TextLabel:TweenPosition(UDim2.new(-0.005, 0,0.939, 0))
 	wait(0.5)
 	script.Parent.Frame.Visible = false
 	wait(0.5)
@@ -171,4 +175,4 @@ local function FJKBO_fake_script() -- SpeedGui.LocalScript
 	wait(1)
 	script.Parent.TextLabel.Visible = false
 end
-coroutine.wrap(FJKBO_fake_script)()
+coroutine.wrap(CZRJLU_fake_script)()
