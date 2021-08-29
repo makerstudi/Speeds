@@ -36,10 +36,9 @@ UICorner.Parent = Frame
 
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Frame_2.BackgroundTransparency = 0.020
 Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(-0.0220131483, 0, -0.0413333476, 0)
-Frame_2.Size = UDim2.new(0.984265625, 0, 0.981521308, 0)
+Frame_2.Position = UDim2.new(-0.00311400369, 0, -0.00348024187, 0)
+Frame_2.Size = UDim2.new(1.00311399, 0, 1.00348008, 0)
 
 UICorner_2.Parent = Frame_2
 
@@ -67,7 +66,7 @@ TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 40.000
 
 Frame_3.Parent = Frame_2
-Frame_3.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame_3.BorderColor3 = Color3.fromRGB(44, 44, 44)
 Frame_3.Position = UDim2.new(-8.68217285e-08, 0, 0, 0)
 Frame_3.Size = UDim2.new(0.999012113, 0, 0.134364158, 0)
@@ -98,9 +97,10 @@ TextButton_2.TextSize = 30.000
 TextButton_2.TextWrapped = true
 
 ImageLabel.Parent = Frame_2
-ImageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.Position = UDim2.new(0, 0, 0.00550939143, 0)
-ImageLabel.Size = UDim2.new(0.0807987154, 0, 0.124728054, 0)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0, 0, 0.00550937653, 0)
+ImageLabel.Size = UDim2.new(0.0745185539, 0, 0.124728054, 0)
 ImageLabel.Image = "rbxassetid://7356002448"
 
 UICorner_5.Parent = ImageLabel
@@ -108,7 +108,7 @@ UICorner_5.Parent = ImageLabel
 TextButton_3.Parent = Frame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 84, 87)
 TextButton_3.BackgroundTransparency = 1.000
-TextButton_3.Position = UDim2.new(0.845664442, 0, -0.0413333476, 0)
+TextButton_3.Position = UDim2.new(0.864563584, 0, -0.00348025188, 0)
 TextButton_3.Size = UDim2.new(0.116588123, 0, 0.127830699, 0)
 TextButton_3.Font = Enum.Font.Cartoon
 TextButton_3.Text = "X"
@@ -135,7 +135,7 @@ UICorner_7.Parent = TextLabel_2
 
 -- Scripts:
 
-local function DGJVT_fake_script() -- TextButton.LocalScript 
+local function SPOXPHU_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -147,8 +147,8 @@ local function DGJVT_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DGJVT_fake_script)()
-local function UMYH_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(SPOXPHU_fake_script)()
+local function WSSM_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -159,16 +159,16 @@ local function UMYH_fake_script() -- TextButton_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UMYH_fake_script)()
-local function KOIWSUM_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(WSSM_fake_script)()
+local function QIBV_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.TextBox.Text = ""
 	end)
 end
-coroutine.wrap(KOIWSUM_fake_script)()
-local function YNOYY_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(QIBV_fake_script)()
+local function QPKKG_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -179,8 +179,8 @@ local function YNOYY_fake_script() -- TextButton_3.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(YNOYY_fake_script)()
-local function EBVGHX_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(QPKKG_fake_script)()
+local function GFOBP_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.TextLabel.Visible = true
@@ -204,4 +204,4 @@ local function EBVGHX_fake_script() -- SpeedGui.LocalScript
 	wait(1)
 	script.Parent.TextLabel.Visible = false
 end
-coroutine.wrap(EBVGHX_fake_script)()
+coroutine.wrap(GFOBP_fake_script)()
