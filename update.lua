@@ -3,24 +3,34 @@ local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Frame_2 = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local TextBox = Instance.new("TextBox")
+local SpeedTextBox = Instance.new("TextBox")
 local UICorner_3 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
-local Frame_3 = Instance.new("Frame")
+local SpeedButton = Instance.new("TextButton")
+local RespawnButton = Instance.new("TextButton")
+local SpeedText = Instance.new("TextLabel")
+local infJumpText = Instance.new("TextLabel")
+local JumpButton = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local TextButton_2 = Instance.new("TextButton")
-local ImageLabel = Instance.new("ImageLabel")
+local warning = Instance.new("TextLabel")
+local JumpText = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local TextButton_3 = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
+local MainText = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local ImageLabel = Instance.new("ImageLabel")
 local UICorner_7 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_9 = Instance.new("UICorner")
 
 --Properties:
 
 SpeedGui.Name = "SpeedGui"
 SpeedGui.Parent = game.CoreGui
+SpeedGui.ResetOnSpawn = false
 
 Frame.Parent = SpeedGui
 Frame.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
@@ -42,59 +52,142 @@ Frame_2.Size = UDim2.new(1.00311399, 0, 1.00348008, 0)
 
 UICorner_2.Parent = Frame_2
 
-TextBox.Parent = Frame_2
-TextBox.BackgroundColor3 = Color3.fromRGB(162, 162, 162)
-TextBox.Position = UDim2.new(0.213690504, 0, 0.22195214, 0)
-TextBox.Size = UDim2.new(0.570598066, 0, 0.266101986, 0)
-TextBox.Font = Enum.Font.Cartoon
-TextBox.PlaceholderText = "Enter Speed Here"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextSize = 20.000
+SpeedTextBox.Name = "SpeedTextBox"
+SpeedTextBox.Parent = Frame_2
+SpeedTextBox.BackgroundColor3 = Color3.fromRGB(162, 162, 162)
+SpeedTextBox.BorderSizePixel = 0
+SpeedTextBox.Position = UDim2.new(0.0564857125, 0, 0.264555007, 0)
+SpeedTextBox.Size = UDim2.new(0.451475382, 0, 0.143618748, 0)
+SpeedTextBox.Font = Enum.Font.Cartoon
+SpeedTextBox.PlaceholderText = "Enter Speed Here"
+SpeedTextBox.Text = ""
+SpeedTextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedTextBox.TextSize = 20.000
 
-UICorner_3.CornerRadius = UDim.new(0, 5)
-UICorner_3.Parent = TextBox
+UICorner_3.CornerRadius = UDim.new(0, 3)
+UICorner_3.Parent = SpeedTextBox
 
-TextButton.Parent = Frame_2
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.114285894, 0, 0.555028439, 0)
-TextButton.Size = UDim2.new(0.767599344, 0, 0.173547551, 0)
-TextButton.Style = Enum.ButtonStyle.RobloxRoundButton
-TextButton.Font = Enum.Font.Cartoon
-TextButton.Text = "Set"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 40.000
+SpeedButton.Name = "SpeedButton"
+SpeedButton.Parent = Frame_2
+SpeedButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedButton.Position = UDim2.new(0.0546242595, 0, 0.411243707, 0)
+SpeedButton.Size = UDim2.new(0.453336805, 0, 0.146920741, 0)
+SpeedButton.Style = Enum.ButtonStyle.RobloxRoundButton
+SpeedButton.Font = Enum.Font.Cartoon
+SpeedButton.Text = "Set"
+SpeedButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedButton.TextSize = 28.000
+SpeedButton.TextWrapped = true
+
+RespawnButton.Name = "RespawnButton"
+RespawnButton.Parent = Frame_2
+RespawnButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RespawnButton.Position = UDim2.new(0.204121932, 0, 0.854657769, 0)
+RespawnButton.Size = UDim2.new(0.594429255, 0, 0.144910783, 0)
+RespawnButton.Style = Enum.ButtonStyle.RobloxRoundButton
+RespawnButton.Font = Enum.Font.Cartoon
+RespawnButton.Text = "Respawn"
+RespawnButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+RespawnButton.TextSize = 30.000
+RespawnButton.TextWrapped = true
+
+SpeedText.Name = "SpeedText"
+SpeedText.Parent = Frame_2
+SpeedText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedText.BackgroundTransparency = 1.000
+SpeedText.Position = UDim2.new(0.0510014966, 0, 0.133133963, 0)
+SpeedText.Size = UDim2.new(0.43183893, 0, 0.131729171, 0)
+SpeedText.Font = Enum.Font.Cartoon
+SpeedText.Text = "Speed"
+SpeedText.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedText.TextScaled = true
+SpeedText.TextSize = 14.000
+SpeedText.TextWrapped = true
+
+infJumpText.Name = "infJumpText"
+infJumpText.Parent = Frame_2
+infJumpText.BackgroundColor3 = Color3.fromRGB(160, 255, 153)
+infJumpText.BackgroundTransparency = 1.000
+infJumpText.Position = UDim2.new(0.509453177, 0, 0.260942578, 0)
+infJumpText.Size = UDim2.new(0.306235909, 0, 0.126810431, 0)
+infJumpText.Font = Enum.Font.Cartoon
+infJumpText.Text = "infJump"
+infJumpText.TextColor3 = Color3.fromRGB(144, 255, 179)
+infJumpText.TextScaled = true
+infJumpText.TextSize = 14.000
+infJumpText.TextWrapped = true
+
+JumpButton.Name = "JumpButton"
+JumpButton.Parent = Frame_2
+JumpButton.BackgroundColor3 = Color3.fromRGB(120, 190, 255)
+JumpButton.Position = UDim2.new(0.796848476, 0, 0.283435106, 0)
+JumpButton.Size = UDim2.new(0.177547157, 0, 0.104317874, 0)
+JumpButton.Font = Enum.Font.Cartoon
+JumpButton.Text = "ON"
+JumpButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+JumpButton.TextSize = 19.000
+JumpButton.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 3)
+UICorner_4.Parent = JumpButton
+
+warning.Name = "warning"
+warning.Parent = Frame_2
+warning.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+warning.BackgroundTransparency = 1.000
+warning.Position = UDim2.new(0.559694409, 0, 0.40472728, 0)
+warning.Size = UDim2.new(0.43183893, 0, 0.110427737, 0)
+warning.Font = Enum.Font.Cartoon
+warning.Text = "Reset to turn off"
+warning.TextColor3 = Color3.fromRGB(0, 0, 0)
+warning.TextScaled = true
+warning.TextSize = 14.000
+warning.TextWrapped = true
+
+JumpText.Name = "JumpText"
+JumpText.Parent = Frame_2
+JumpText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JumpText.BackgroundTransparency = 1.000
+JumpText.Position = UDim2.new(0.565974712, 0, 0.122483246, 0)
+JumpText.Size = UDim2.new(0.43183893, 0, 0.131729171, 0)
+JumpText.Font = Enum.Font.Cartoon
+JumpText.Text = "Jump"
+JumpText.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpText.TextScaled = true
+JumpText.TextSize = 14.000
+JumpText.TextWrapped = true
 
 Frame_3.Parent = Frame_2
-Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BorderColor3 = Color3.fromRGB(44, 44, 44)
-Frame_3.Position = UDim2.new(-9.17306693e-08, 0, 0, 0)
-Frame_3.Size = UDim2.new(0.999999881, 0, 0.134364143, 0)
+Frame_3.BackgroundColor3 = Color3.fromRGB(52, 106, 255)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0, 0, 0.0532535873, 0)
+Frame_3.Size = UDim2.new(0.0466186255, 0, 0.946746409, 0)
 
-UICorner_4.Parent = Frame_3
+UICorner_5.Parent = Frame_3
 
-TextLabel.Parent = Frame_2
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.214285672, 0, 0, 0)
-TextLabel.Size = UDim2.new(0.570002496, 0, 0.131729171, 0)
-TextLabel.Font = Enum.Font.Cartoon
-TextLabel.Text = "Speed"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+Frame_4.Parent = Frame_2
+Frame_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Frame_4.Position = UDim2.new(-9.17306693e-08, 0, 0, 0)
+Frame_4.Size = UDim2.new(0.999999881, 0, 0.134364143, 0)
 
-TextButton_2.Parent = Frame_2
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.Position = UDim2.new(0.200981855, 0, 0.726849139, 0)
-TextButton_2.Size = UDim2.new(0.594429255, 0, 0.144910783, 0)
-TextButton_2.Style = Enum.ButtonStyle.RobloxRoundButton
-TextButton_2.Font = Enum.Font.Cartoon
-TextButton_2.Text = "reset"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 30.000
-TextButton_2.TextWrapped = true
+UICorner_6.Parent = Frame_4
+
+MainText.Name = "MainText"
+MainText.Parent = Frame_2
+MainText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainText.BackgroundTransparency = 1.000
+MainText.Position = UDim2.new(0.214285672, 0, 0, 0)
+MainText.Size = UDim2.new(0.570002496, 0, 0.131729171, 0)
+MainText.Font = Enum.Font.Cartoon
+MainText.Text = "Main"
+MainText.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainText.TextScaled = true
+MainText.TextSize = 14.000
+MainText.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(171, 160, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(133, 239, 255))}
+UIGradient.Parent = MainText
 
 ImageLabel.Parent = Frame_2
 ImageLabel.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
@@ -103,73 +196,119 @@ ImageLabel.Position = UDim2.new(0, 0, 0.00550937653, 0)
 ImageLabel.Size = UDim2.new(0.068506889, 0, 0.124728054, 0)
 ImageLabel.Image = "rbxassetid://7356002448"
 
-UICorner_5.Parent = ImageLabel
+UICorner_7.Parent = ImageLabel
 
-TextButton_3.Parent = Frame
-TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 84, 87)
-TextButton_3.BackgroundTransparency = 1.000
-TextButton_3.Position = UDim2.new(0.926745355, 0, -0.00348024187, 0)
-TextButton_3.Size = UDim2.new(0.0694824085, 0, 0.127830699, 0)
-TextButton_3.Font = Enum.Font.Cartoon
-TextButton_3.Text = "X"
-TextButton_3.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 14.000
-TextButton_3.TextWrapped = true
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 84, 87)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.926745355, 0, -0.00348024187, 0)
+TextButton.Size = UDim2.new(0.0694824085, 0, 0.127830699, 0)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
 
-UICorner_6.Parent = TextButton_3
+UICorner_8.Parent = TextButton
 
-TextLabel_2.Parent = SpeedGui
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextLabel_2.Position = UDim2.new(-0.300999999, 0, 0.940999985, 0)
-TextLabel_2.Size = UDim2.new(0, 397, 0, 35)
-TextLabel_2.Visible = false
-TextLabel_2.Font = Enum.Font.Cartoon
-TextLabel_2.Text = "turn off the ui then run the script again"
-TextLabel_2.TextColor3 = Color3.fromRGB(209, 209, 209)
-TextLabel_2.TextSize = 23.000
-TextLabel_2.TextWrapped = true
+TextLabel.Parent = SpeedGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.Position = UDim2.new(-0.300999999, 0, 0.940999985, 0)
+TextLabel.Size = UDim2.new(0, 397, 0, 35)
+TextLabel.Visible = false
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "turn off the ui then run the script again"
+TextLabel.TextColor3 = Color3.fromRGB(209, 209, 209)
+TextLabel.TextSize = 23.000
+TextLabel.TextWrapped = true
 
-UICorner_7.CornerRadius = UDim.new(0, 4)
-UICorner_7.Parent = TextLabel_2
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = TextLabel
 
 -- Scripts:
 
-local function QUHKMII_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+local function ASRAI_fake_script() -- SpeedButton.LocalScript 
+	local script = Instance.new('LocalScript', SpeedButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local player = game.Players.LocalPlayer
-		local setspeed = script.Parent.Parent.TextBox.Text
+		local setspeed = script.Parent.Parent.SpeedTextBox.Text
 		local hum = game.Workspace:WaitForChild(player.Name).Humanoid
 		if hum then
 			hum.WalkSpeed = setspeed
 		end
 	end)
 end
-coroutine.wrap(QUHKMII_fake_script)()
-local function JOVHFMA_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
+coroutine.wrap(ASRAI_fake_script)()
+local function ULBMHUV_fake_script() -- RespawnButton.LocalScript 
+	local script = Instance.new('LocalScript', RespawnButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local player = game.Players.LocalPlayer
 		local hum = game.Workspace:WaitForChild(player.Name).Humanoid
 		if hum then
-			hum.WalkSpeed = 16
+			hum.Health = 0
 		end
 	end)
 end
-coroutine.wrap(JOVHFMA_fake_script)()
-local function LYFDDZ_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
+coroutine.wrap(ULBMHUV_fake_script)()
+local function SGQC_fake_script() -- JumpButton.LocalScript 
+	local script = Instance.new('LocalScript', JumpButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.TextBox.Text = ""
+		local UIS = game:GetService("UserInputService")
+		local player = game.Players.LocalPlayer
+		local character
+		local humanoid
+	
+		local canDoubleJump = false
+		local hasDoubleJumped = false
+		local oldPower
+		local time_delay = 0.2
+		local jump_multiplier = 1 -- set to 1 for a normal double jump, increase for the second jump to be higher
+	
+		function onJumpRequest()
+			if not character or not humanoid or not character:IsDescendantOf(workspace) or humanoid:GetState() == Enum.HumanoidStateType.Dead then
+				return
+			end
+	
+			if canDoubleJump and not hasDoubleJumped then
+				hasDoubleJumped = false
+				humanoid.JumpPower = oldPower * jump_multiplier
+				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+			end
+		end
+	
+		local function characterAdded(new)
+			character = new
+			humanoid = new:WaitForChild("Humanoid")
+			hasDoubleJumped = false
+			canDoubleJump = false
+			oldPower = humanoid.JumpPower
+	
+			humanoid.StateChanged:connect(function(old, new)
+				if new == Enum.HumanoidStateType.Landed then
+					canDoubleJump = false
+					hasDoubleJumped = false
+					humanoid.JumpPower = oldPower
+				elseif new == Enum.HumanoidStateType.Freefall then
+					wait(time_delay)
+					canDoubleJump = true
+				end
+			end)
+		end
+	
+		if player.Character then
+			characterAdded(player.Character)	
+		end
+		player.CharacterAdded:connect(characterAdded)
+		UIS.JumpRequest:connect(onJumpRequest)
 	end)
 end
-coroutine.wrap(LYFDDZ_fake_script)()
-local function PKVGUFP_fake_script() -- TextButton_3.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_3)
+coroutine.wrap(SGQC_fake_script)()
+local function GUJQ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Position = UDim2.new(0.373,0,0.586,0)
@@ -179,8 +318,8 @@ local function PKVGUFP_fake_script() -- TextButton_3.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(PKVGUFP_fake_script)()
-local function GENAWKT_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(GUJQ_fake_script)()
+local function YDMMNR_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.TextLabel.Visible = true
@@ -198,13 +337,13 @@ local function GENAWKT_fake_script() -- SpeedGui.LocalScript
 	script.Parent.Frame:TweenPosition(UDim2.new(0.373,0,-1,0))
 	wait(0.2)
 	script.Parent.Frame:TweenPosition(UDim2.new(0.373, 0,0.372, 0))
-	wait(5)
+	wait(4)
 	script.Parent.TextLabel.Position = UDim2.new(-0.008, 0,0.939, 0)
 	script.Parent.TextLabel:TweenPosition(UDim2.new(-0.301, 0,0.941, 0))
 	wait(1)
 	script.Parent.TextLabel.Visible = false
 end
-coroutine.wrap(GENAWKT_fake_script)()
+coroutine.wrap(YDMMNR_fake_script)()
 --[[
 ___  ___        _                           _         _   
 |  \/  |       (_)                         (_)       | |  
