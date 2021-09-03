@@ -15,16 +15,14 @@ local warning = Instance.new("TextLabel")
 local JumpText = Instance.new("TextLabel")
 local Frame_3 = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local Frame_4 = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
 local MainText = Instance.new("TextLabel")
 local UIGradient = Instance.new("UIGradient")
 local ImageLabel = Instance.new("ImageLabel")
+local UICorner_6 = Instance.new("UICorner")
+local ExitButton = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 
 --Properties:
 
@@ -158,20 +156,12 @@ JumpText.TextSize = 14.000
 JumpText.TextWrapped = true
 
 Frame_3.Parent = Frame_2
-Frame_3.BackgroundColor3 = Color3.fromRGB(52, 106, 255)
-Frame_3.BorderSizePixel = 0
-Frame_3.Position = UDim2.new(0, 0, 0.0532535873, 0)
-Frame_3.Size = UDim2.new(0.0466186255, 0, 0.946746409, 0)
+Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Frame_3.Position = UDim2.new(-9.17306693e-08, 0, 0, 0)
+Frame_3.Size = UDim2.new(0.999999881, 0, 0.134364143, 0)
 
 UICorner_5.Parent = Frame_3
-
-Frame_4.Parent = Frame_2
-Frame_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_4.BorderColor3 = Color3.fromRGB(44, 44, 44)
-Frame_4.Position = UDim2.new(-9.17306693e-08, 0, 0, 0)
-Frame_4.Size = UDim2.new(0.999999881, 0, 0.134364143, 0)
-
-UICorner_6.Parent = Frame_4
 
 MainText.Name = "MainText"
 MainText.Parent = Frame_2
@@ -196,21 +186,22 @@ ImageLabel.Position = UDim2.new(0, 0, 0.00550937653, 0)
 ImageLabel.Size = UDim2.new(0.068506889, 0, 0.124728054, 0)
 ImageLabel.Image = "rbxassetid://7356002448"
 
-UICorner_7.Parent = ImageLabel
+UICorner_6.Parent = ImageLabel
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 84, 87)
-TextButton.BackgroundTransparency = 1.000
-TextButton.Position = UDim2.new(0.926745355, 0, -0.00348024187, 0)
-TextButton.Size = UDim2.new(0.0694824085, 0, 0.127830699, 0)
-TextButton.Font = Enum.Font.Cartoon
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
+ExitButton.Name = "ExitButton"
+ExitButton.Parent = Frame
+ExitButton.BackgroundColor3 = Color3.fromRGB(255, 84, 87)
+ExitButton.BackgroundTransparency = 1.000
+ExitButton.Position = UDim2.new(0.926745355, 0, -0.00348024187, 0)
+ExitButton.Size = UDim2.new(0.0694824085, 0, 0.127830699, 0)
+ExitButton.Font = Enum.Font.Cartoon
+ExitButton.Text = "X"
+ExitButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+ExitButton.TextScaled = true
+ExitButton.TextSize = 14.000
+ExitButton.TextWrapped = true
 
-UICorner_8.Parent = TextButton
+UICorner_7.Parent = ExitButton
 
 TextLabel.Parent = SpeedGui
 TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -223,12 +214,12 @@ TextLabel.TextColor3 = Color3.fromRGB(209, 209, 209)
 TextLabel.TextSize = 23.000
 TextLabel.TextWrapped = true
 
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = TextLabel
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = TextLabel
 
 -- Scripts:
 
-local function ASRAI_fake_script() -- SpeedButton.LocalScript 
+local function RWVCHA_fake_script() -- SpeedButton.LocalScript 
 	local script = Instance.new('LocalScript', SpeedButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -240,8 +231,8 @@ local function ASRAI_fake_script() -- SpeedButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ASRAI_fake_script)()
-local function ULBMHUV_fake_script() -- RespawnButton.LocalScript 
+coroutine.wrap(RWVCHA_fake_script)()
+local function SFGRGK_fake_script() -- RespawnButton.LocalScript 
 	local script = Instance.new('LocalScript', RespawnButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -252,8 +243,8 @@ local function ULBMHUV_fake_script() -- RespawnButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ULBMHUV_fake_script)()
-local function SGQC_fake_script() -- JumpButton.LocalScript 
+coroutine.wrap(SFGRGK_fake_script)()
+local function RBNAP_fake_script() -- JumpButton.LocalScript 
 	local script = Instance.new('LocalScript', JumpButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -306,20 +297,28 @@ local function SGQC_fake_script() -- JumpButton.LocalScript
 		UIS.JumpRequest:connect(onJumpRequest)
 	end)
 end
-coroutine.wrap(SGQC_fake_script)()
-local function GUJQ_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+coroutine.wrap(RBNAP_fake_script)()
+local function ROMKOH_fake_script() -- ExitButton.LocalScript 
+	local script = Instance.new('LocalScript', ExitButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Position = UDim2.new(0.373,0,0.586,0)
-		wait(0.3)
-		script.Parent.Parent:TweenPosition(UDim2.new(0.373,0,1.1,0))
-		wait(0.6)
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GUJQ_fake_script)()
-local function YDMMNR_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(ROMKOH_fake_script)()
+local function LYHK_fake_script() -- Frame.keyScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local plr = game.Players.LocalPlayer
+	
+	plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "f" then
+			script.Parent.Parent.Frame.Visible = true
+		end
+	end)
+end
+coroutine.wrap(LYHK_fake_script)()
+local function XLQS_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.TextLabel.Visible = true
@@ -343,7 +342,7 @@ local function YDMMNR_fake_script() -- SpeedGui.LocalScript
 	wait(1)
 	script.Parent.TextLabel.Visible = false
 end
-coroutine.wrap(YDMMNR_fake_script)()
+coroutine.wrap(XLQS_fake_script)()
 --[[
 ___  ___        _                           _         _   
 |  \/  |       (_)                         (_)       | |  
