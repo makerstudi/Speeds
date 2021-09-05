@@ -59,6 +59,7 @@ Frame.Position = UDim2.new(-0.294999987, 0, 0.39199999, 0)
 Frame.Size = UDim2.new(0.240328953, 0, 0.220411718, 0)
 Frame.Visible = false
 Frame.Active = true
+Frame.Draggable = true
 
 UICorner.Parent = Frame
 
