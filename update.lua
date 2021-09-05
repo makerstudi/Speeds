@@ -128,8 +128,8 @@ Player.Name = "Player"
 Player.Parent = Main
 Player.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 Player.BorderSizePixel = 0
-Player.Position = UDim2.new(0, 0, 0.956233859, 0)
-Player.Size = UDim2.new(0, 317, 0, 97)
+Player.Position = UDim2.new(0, 0, 1.0687319, 0)
+Player.Size = UDim2.new(1.00085938, 0, 5.55617762, 0)
 
 SpeedButton.Name = "SpeedButton"
 SpeedButton.Parent = Player
@@ -239,8 +239,8 @@ Player2.Name = "Player2"
 Player2.Parent = Main
 Player2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 Player2.BorderSizePixel = 0
-Player2.Position = UDim2.new(0, 0, 0.956233859, 0)
-Player2.Size = UDim2.new(0, 317, 0, 97)
+Player2.Position = UDim2.new(0, 0, 1.12498105, 0)
+Player2.Size = UDim2.new(1.00100005, 0, 5.55600023, 0)
 Player2.Visible = false
 
 Text.Name = "Text"
@@ -337,7 +337,7 @@ creator.Parent = Main
 creator.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 creator.BorderSizePixel = 0
 creator.Position = UDim2.new(0, 0, 0.956233859, 0)
-creator.Size = UDim2.new(0, 317, 0, 97)
+creator.Size = UDim2.new(1.00100005, 0, 5.55600023, 0)
 creator.Visible = false
 
 Text_2.Name = "Text"
@@ -397,7 +397,7 @@ Settings.Parent = Main
 Settings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 Settings.BorderSizePixel = 0
 Settings.Position = UDim2.new(0, 0, 0.956233859, 0)
-Settings.Size = UDim2.new(0, 317, 0, 97)
+Settings.Size = UDim2.new(1.00100005, 0, 5.55600023, 0)
 Settings.Visible = false
 
 _3Text_2.Name = "3Text"
@@ -470,7 +470,7 @@ UICorner_9.Parent = TextLabel
 
 -- Scripts:
 
-local function GNBHP_fake_script() -- RespawnButton.LocalScript 
+local function EAYVOHJ_fake_script() -- RespawnButton.LocalScript 
 	local script = Instance.new('LocalScript', RespawnButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -481,8 +481,8 @@ local function GNBHP_fake_script() -- RespawnButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GNBHP_fake_script)()
-local function QRTGDJI_fake_script() -- PlayerButton.LocalScript 
+coroutine.wrap(EAYVOHJ_fake_script)()
+local function ORHCU_fake_script() -- PlayerButton.LocalScript 
 	local script = Instance.new('LocalScript', PlayerButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -492,8 +492,8 @@ local function QRTGDJI_fake_script() -- PlayerButton.LocalScript
 		script.Parent.Parent.Player.Visible = true
 	end)
 end
-coroutine.wrap(QRTGDJI_fake_script)()
-local function PQDIWY_fake_script() -- SpeedButton.LocalScript 
+coroutine.wrap(ORHCU_fake_script)()
+local function FMCK_fake_script() -- SpeedButton.LocalScript 
 	local script = Instance.new('LocalScript', SpeedButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -508,8 +508,8 @@ local function PQDIWY_fake_script() -- SpeedButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PQDIWY_fake_script)()
-local function GUYMKJI_fake_script() -- JumpButton.LocalScript 
+coroutine.wrap(FMCK_fake_script)()
+local function YWEGRSG_fake_script() -- JumpButton.LocalScript 
 	local script = Instance.new('LocalScript', JumpButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -562,8 +562,8 @@ local function GUYMKJI_fake_script() -- JumpButton.LocalScript
 		UIS.JumpRequest:connect(onJumpRequest)
 	end)
 end
-coroutine.wrap(GUYMKJI_fake_script)()
-local function DUSSZ_fake_script() -- Player2Button.LocalScript 
+coroutine.wrap(YWEGRSG_fake_script)()
+local function UOAU_fake_script() -- Player2Button.LocalScript 
 	local script = Instance.new('LocalScript', Player2Button)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -573,8 +573,8 @@ local function DUSSZ_fake_script() -- Player2Button.LocalScript
 		script.Parent.Parent.Player2.Visible = true
 	end)
 end
-coroutine.wrap(DUSSZ_fake_script)()
-local function ZJMEH_fake_script() -- noclipButton.LocalScript 
+coroutine.wrap(UOAU_fake_script)()
+local function JJTIH_fake_script() -- noclipButton.LocalScript 
 	local script = Instance.new('LocalScript', noclipButton)
 
 	local function UpdateText(Obj,strl)
@@ -609,8 +609,8 @@ local function ZJMEH_fake_script() -- noclipButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZJMEH_fake_script)()
-local function GJPOAH_fake_script() -- creatorButton.LocalScript 
+coroutine.wrap(JJTIH_fake_script)()
+local function YWPMRF_fake_script() -- creatorButton.LocalScript 
 	local script = Instance.new('LocalScript', creatorButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -620,8 +620,8 @@ local function GJPOAH_fake_script() -- creatorButton.LocalScript
 		script.Parent.Parent.creator.Visible = true
 	end)
 end
-coroutine.wrap(GJPOAH_fake_script)()
-local function NSVX_fake_script() -- SettingsButton.LocalScript 
+coroutine.wrap(YWPMRF_fake_script)()
+local function QMOS_fake_script() -- SettingsButton.LocalScript 
 	local script = Instance.new('LocalScript', SettingsButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -631,16 +631,16 @@ local function NSVX_fake_script() -- SettingsButton.LocalScript
 		script.Parent.Parent.Settings.Visible = true
 	end)
 end
-coroutine.wrap(NSVX_fake_script)()
-local function OMXHJ_fake_script() -- ExitButton.LocalScript 
+coroutine.wrap(QMOS_fake_script)()
+local function BVJZER_fake_script() -- ExitButton.LocalScript 
 	local script = Instance.new('LocalScript', ExitButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OMXHJ_fake_script)()
-local function JIMG_fake_script() -- Frame.keyScript 
+coroutine.wrap(BVJZER_fake_script)()
+local function UUSTZ_fake_script() -- Frame.keyScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local plr = game.Players.LocalPlayer
@@ -651,8 +651,8 @@ local function JIMG_fake_script() -- Frame.keyScript
 		end
 	end)
 end
-coroutine.wrap(JIMG_fake_script)()
-local function IYHCNE_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(UUSTZ_fake_script)()
+local function JMERMGI_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.Frame.Visible = false
@@ -667,4 +667,4 @@ local function IYHCNE_fake_script() -- SpeedGui.LocalScript
 	wait(0.2)
 	script.Parent.Frame:TweenPosition(UDim2.new(0.373, 0,0.372, 0))
 end
-coroutine.wrap(IYHCNE_fake_script)()
+coroutine.wrap(JMERMGI_fake_script)()
