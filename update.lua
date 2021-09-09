@@ -98,7 +98,7 @@ MainText.BackgroundTransparency = 1.000
 MainText.Position = UDim2.new(0.214285672, 0, 0, 0)
 MainText.Size = UDim2.new(0.570002496, 0, 0.131729171, 0)
 MainText.Font = Enum.Font.Cartoon
-MainText.Text = "Main"
+MainText.Text = "Sharks X"
 MainText.TextColor3 = Color3.fromRGB(255, 255, 255)
 MainText.TextScaled = true
 MainText.TextSize = 14.000
@@ -470,7 +470,7 @@ UICorner_9.Parent = TextLabel
 
 -- Scripts:
 
-local function EAYVOHJ_fake_script() -- RespawnButton.LocalScript 
+local function AOOE_fake_script() -- RespawnButton.LocalScript 
 	local script = Instance.new('LocalScript', RespawnButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -481,8 +481,8 @@ local function EAYVOHJ_fake_script() -- RespawnButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EAYVOHJ_fake_script)()
-local function ORHCU_fake_script() -- PlayerButton.LocalScript 
+coroutine.wrap(AOOE_fake_script)()
+local function XROUSB_fake_script() -- PlayerButton.LocalScript 
 	local script = Instance.new('LocalScript', PlayerButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -492,8 +492,8 @@ local function ORHCU_fake_script() -- PlayerButton.LocalScript
 		script.Parent.Parent.Player.Visible = true
 	end)
 end
-coroutine.wrap(ORHCU_fake_script)()
-local function FMCK_fake_script() -- SpeedButton.LocalScript 
+coroutine.wrap(XROUSB_fake_script)()
+local function IWCQQ_fake_script() -- SpeedButton.LocalScript 
 	local script = Instance.new('LocalScript', SpeedButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -508,8 +508,8 @@ local function FMCK_fake_script() -- SpeedButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FMCK_fake_script)()
-local function YWEGRSG_fake_script() -- JumpButton.LocalScript 
+coroutine.wrap(IWCQQ_fake_script)()
+local function HJMHJ_fake_script() -- JumpButton.LocalScript 
 	local script = Instance.new('LocalScript', JumpButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -562,8 +562,8 @@ local function YWEGRSG_fake_script() -- JumpButton.LocalScript
 		UIS.JumpRequest:connect(onJumpRequest)
 	end)
 end
-coroutine.wrap(YWEGRSG_fake_script)()
-local function UOAU_fake_script() -- Player2Button.LocalScript 
+coroutine.wrap(HJMHJ_fake_script)()
+local function HMSLHM_fake_script() -- Player2Button.LocalScript 
 	local script = Instance.new('LocalScript', Player2Button)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -573,8 +573,8 @@ local function UOAU_fake_script() -- Player2Button.LocalScript
 		script.Parent.Parent.Player2.Visible = true
 	end)
 end
-coroutine.wrap(UOAU_fake_script)()
-local function JJTIH_fake_script() -- noclipButton.LocalScript 
+coroutine.wrap(HMSLHM_fake_script)()
+local function UWLNSZ_fake_script() -- noclipButton.LocalScript 
 	local script = Instance.new('LocalScript', noclipButton)
 
 	local function UpdateText(Obj,strl)
@@ -609,8 +609,8 @@ local function JJTIH_fake_script() -- noclipButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JJTIH_fake_script)()
-local function YWPMRF_fake_script() -- creatorButton.LocalScript 
+coroutine.wrap(UWLNSZ_fake_script)()
+local function TENXY_fake_script() -- creatorButton.LocalScript 
 	local script = Instance.new('LocalScript', creatorButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -620,8 +620,8 @@ local function YWPMRF_fake_script() -- creatorButton.LocalScript
 		script.Parent.Parent.creator.Visible = true
 	end)
 end
-coroutine.wrap(YWPMRF_fake_script)()
-local function QMOS_fake_script() -- SettingsButton.LocalScript 
+coroutine.wrap(TENXY_fake_script)()
+local function ZBVI_fake_script() -- SettingsButton.LocalScript 
 	local script = Instance.new('LocalScript', SettingsButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -631,16 +631,16 @@ local function QMOS_fake_script() -- SettingsButton.LocalScript
 		script.Parent.Parent.Settings.Visible = true
 	end)
 end
-coroutine.wrap(QMOS_fake_script)()
-local function BVJZER_fake_script() -- ExitButton.LocalScript 
+coroutine.wrap(ZBVI_fake_script)()
+local function VKGB_fake_script() -- ExitButton.LocalScript 
 	local script = Instance.new('LocalScript', ExitButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BVJZER_fake_script)()
-local function UUSTZ_fake_script() -- Frame.keyScript 
+coroutine.wrap(VKGB_fake_script)()
+local function EUZSBTP_fake_script() -- Frame.keyScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local plr = game.Players.LocalPlayer
@@ -651,8 +651,8 @@ local function UUSTZ_fake_script() -- Frame.keyScript
 		end
 	end)
 end
-coroutine.wrap(UUSTZ_fake_script)()
-local function JMERMGI_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(EUZSBTP_fake_script)()
+local function AUQRWD_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.Frame.Visible = false
@@ -667,4 +667,4 @@ local function JMERMGI_fake_script() -- SpeedGui.LocalScript
 	wait(0.2)
 	script.Parent.Frame:TweenPosition(UDim2.new(0.373, 0,0.372, 0))
 end
-coroutine.wrap(JMERMGI_fake_script)()
+coroutine.wrap(AUQRWD_fake_script)()
