@@ -12,22 +12,23 @@ local Main = Instance.new("Frame")
 local PlayerButton = Instance.new("TextButton")
 local Player = Instance.new("Frame")
 local SpeedButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 local SpeedText = Instance.new("TextLabel")
 local SpeedTextBox = Instance.new("TextBox")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local JumpText = Instance.new("TextLabel")
 local JumpButton = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local infJumpText = Instance.new("TextLabel")
 local warning = Instance.new("TextLabel")
 local Player2Button = Instance.new("TextButton")
 local Player2 = Instance.new("Frame")
 local Text = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 local noclipText = Instance.new("TextLabel")
 local noclipButton = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local noclipText_2 = Instance.new("TextLabel")
 local creatorButton = Instance.new("TextButton")
 local SettingsButton = Instance.new("TextButton")
@@ -41,9 +42,9 @@ local _3Text_2 = Instance.new("TextLabel")
 local Text_3 = Instance.new("TextLabel")
 local _2Text_2 = Instance.new("TextLabel")
 local ExitButton = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
 local UICorner_9 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
 
 --Properties:
 
@@ -56,7 +57,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
 Frame.BackgroundTransparency = 0.200
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(-0.294999987, 0, 0.39199999, 0)
-Frame.Size = UDim2.new(0.240328953, 0, 0.220411718, 0)
+Frame.Size = UDim2.new(0.232758924, 0, 0.179186732, 0)
 Frame.Visible = false
 Frame.Active = true
 Frame.Draggable = true
@@ -74,7 +75,7 @@ UICorner_2.Parent = Frame_2
 RespawnButton.Name = "RespawnButton"
 RespawnButton.Parent = Frame_2
 RespawnButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RespawnButton.Position = UDim2.new(0.204121932, 0, 0.854657769, 0)
+RespawnButton.Position = UDim2.new(0.204121932, 0, 0.817083418, 0)
 RespawnButton.Size = UDim2.new(0.594429255, 0, 0.144910783, 0)
 RespawnButton.Style = Enum.ButtonStyle.RobloxRoundButton
 RespawnButton.Font = Enum.Font.Cartoon
@@ -92,11 +93,11 @@ Frame_3.Size = UDim2.new(0.999999881, 0, 0.134364143, 0)
 UICorner_3.Parent = Frame_3
 
 MainText.Name = "MainText"
-MainText.Parent = Frame_2
+MainText.Parent = Frame_3
 MainText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainText.BackgroundTransparency = 1.000
-MainText.Position = UDim2.new(0.214285672, 0, 0, 0)
-MainText.Size = UDim2.new(0.570002496, 0, 0.131729171, 0)
+MainText.Position = UDim2.new(0.214285642, 0, 0, 0)
+MainText.Size = UDim2.new(0.570002496, 0, 0.999996066, 0)
 MainText.Font = Enum.Font.Cartoon
 MainText.Text = "Sharks X"
 MainText.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -133,15 +134,18 @@ Player.Size = UDim2.new(1.00085938, 0, 5.55617762, 0)
 
 SpeedButton.Name = "SpeedButton"
 SpeedButton.Parent = Player
-SpeedButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SpeedButton.Position = UDim2.new(0.0426614545, 0, 0.600566447, 0)
+SpeedButton.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+SpeedButton.Position = UDim2.new(0.0361835063, 0, 0.637924969, 0)
 SpeedButton.Size = UDim2.new(0.437633246, 0, 0.270632088, 0)
-SpeedButton.Style = Enum.ButtonStyle.RobloxRoundButton
 SpeedButton.Font = Enum.Font.Cartoon
 SpeedButton.Text = "Set"
 SpeedButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedButton.TextScaled = true
 SpeedButton.TextSize = 28.000
 SpeedButton.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = SpeedButton
 
 SpeedText.Name = "SpeedText"
 SpeedText.Parent = Player
@@ -163,13 +167,12 @@ SpeedTextBox.BorderSizePixel = 0
 SpeedTextBox.Position = UDim2.new(0.0313650444, 0, 0.381712914, 0)
 SpeedTextBox.Size = UDim2.new(0.448929608, 0, 0.218853325, 0)
 SpeedTextBox.Font = Enum.Font.Cartoon
-SpeedTextBox.PlaceholderText = "Enter Speed Here"
 SpeedTextBox.Text = ""
 SpeedTextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 SpeedTextBox.TextSize = 20.000
 
-UICorner_4.CornerRadius = UDim.new(0, 3)
-UICorner_4.Parent = SpeedTextBox
+UICorner_5.CornerRadius = UDim.new(0, 3)
+UICorner_5.Parent = SpeedTextBox
 
 JumpText.Name = "JumpText"
 JumpText.Parent = Player
@@ -186,7 +189,7 @@ JumpText.TextWrapped = true
 
 JumpButton.Name = "JumpButton"
 JumpButton.Parent = Player
-JumpButton.BackgroundColor3 = Color3.fromRGB(120, 190, 255)
+JumpButton.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
 JumpButton.Position = UDim2.new(0.768587828, 0, 0.44319579, 0)
 JumpButton.Size = UDim2.new(0.177547157, 0, 0.204356357, 0)
 JumpButton.Font = Enum.Font.Cartoon
@@ -195,8 +198,8 @@ JumpButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 JumpButton.TextSize = 19.000
 JumpButton.TextWrapped = true
 
-UICorner_5.CornerRadius = UDim.new(0, 3)
-UICorner_5.Parent = JumpButton
+UICorner_6.CornerRadius = UDim.new(0, 3)
+UICorner_6.Parent = JumpButton
 
 infJumpText.Name = "infJumpText"
 infJumpText.Parent = Player
@@ -259,16 +262,15 @@ Text.TextWrapped = true
 TextBox.Parent = Player2
 TextBox.BackgroundColor3 = Color3.fromRGB(162, 162, 162)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.0313650444, 0, 0.381712914, 0)
-TextBox.Size = UDim2.new(0.448929608, 0, 0.218853325, 0)
+TextBox.Position = UDim2.new(0.0313650481, 0, 0.431525767, 0)
+TextBox.Size = UDim2.new(0.410752892, 0, 0.255736083, 0)
 TextBox.Font = Enum.Font.Cartoon
-TextBox.PlaceholderText = "Test Text Here"
 TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 20.000
 
-UICorner_6.CornerRadius = UDim.new(0, 3)
-UICorner_6.Parent = TextBox
+UICorner_7.CornerRadius = UDim.new(0, 3)
+UICorner_7.Parent = TextBox
 
 noclipText.Name = "noclipText"
 noclipText.Parent = Player2
@@ -285,7 +287,7 @@ noclipText.TextWrapped = true
 
 noclipButton.Name = "noclipButton"
 noclipButton.Parent = Player2
-noclipButton.BackgroundColor3 = Color3.fromRGB(120, 190, 255)
+noclipButton.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
 noclipButton.Position = UDim2.new(0.768587828, 0, 0.44319579, 0)
 noclipButton.Size = UDim2.new(0.177547157, 0, 0.204356357, 0)
 noclipButton.Font = Enum.Font.Cartoon
@@ -294,8 +296,8 @@ noclipButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 noclipButton.TextSize = 19.000
 noclipButton.TextWrapped = true
 
-UICorner_7.CornerRadius = UDim.new(0, 3)
-UICorner_7.Parent = noclipButton
+UICorner_8.CornerRadius = UDim.new(0, 3)
+UICorner_8.Parent = noclipButton
 
 noclipText_2.Name = "noclipText"
 noclipText_2.Parent = Player2
@@ -344,8 +346,8 @@ Text_2.Name = "Text"
 Text_2.Parent = creator
 Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text_2.BackgroundTransparency = 1.000
-Text_2.Position = UDim2.new(0.291134894, 0, 0, 0)
-Text_2.Size = UDim2.new(0.409720004, 0, 0.247692242, 0)
+Text_2.Position = UDim2.new(0.291134834, 0, 0, 0)
+Text_2.Size = UDim2.new(0.420543611, 0, 0.247423172, 0)
 Text_2.Font = Enum.Font.Cartoon
 Text_2.Text = "Creator"
 Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -430,8 +432,8 @@ _2Text_2.Name = "2Text"
 _2Text_2.Parent = Settings
 _2Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _2Text_2.BackgroundTransparency = 1.000
-_2Text_2.Position = UDim2.new(0.205961496, 0, 0.24742268, 0)
-_2Text_2.Size = UDim2.new(0.585137188, 0, 0.247692242, 0)
+_2Text_2.Position = UDim2.new(0.20596163, 0, 0.247422665, 0)
+_2Text_2.Size = UDim2.new(0.550257802, 0, 0.226145178, 0)
 _2Text_2.Font = Enum.Font.Cartoon
 _2Text_2.Text = "Open Key: F"
 _2Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -452,7 +454,7 @@ ExitButton.TextScaled = true
 ExitButton.TextSize = 14.000
 ExitButton.TextWrapped = true
 
-UICorner_8.Parent = ExitButton
+UICorner_9.Parent = ExitButton
 
 TextLabel.Parent = SpeedGui
 TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -465,12 +467,12 @@ TextLabel.TextColor3 = Color3.fromRGB(209, 209, 209)
 TextLabel.TextSize = 23.000
 TextLabel.TextWrapped = true
 
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = TextLabel
+UICorner_10.CornerRadius = UDim.new(0, 4)
+UICorner_10.Parent = TextLabel
 
 -- Scripts:
 
-local function AOOE_fake_script() -- RespawnButton.LocalScript 
+local function AOYFSY_fake_script() -- RespawnButton.LocalScript 
 	local script = Instance.new('LocalScript', RespawnButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -481,8 +483,8 @@ local function AOOE_fake_script() -- RespawnButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AOOE_fake_script)()
-local function XROUSB_fake_script() -- PlayerButton.LocalScript 
+coroutine.wrap(AOYFSY_fake_script)()
+local function BXDQSL_fake_script() -- PlayerButton.LocalScript 
 	local script = Instance.new('LocalScript', PlayerButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -492,8 +494,8 @@ local function XROUSB_fake_script() -- PlayerButton.LocalScript
 		script.Parent.Parent.Player.Visible = true
 	end)
 end
-coroutine.wrap(XROUSB_fake_script)()
-local function IWCQQ_fake_script() -- SpeedButton.LocalScript 
+coroutine.wrap(BXDQSL_fake_script)()
+local function AEWKHF_fake_script() -- SpeedButton.LocalScript 
 	local script = Instance.new('LocalScript', SpeedButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -508,8 +510,8 @@ local function IWCQQ_fake_script() -- SpeedButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IWCQQ_fake_script)()
-local function HJMHJ_fake_script() -- JumpButton.LocalScript 
+coroutine.wrap(AEWKHF_fake_script)()
+local function OHLSJEV_fake_script() -- JumpButton.LocalScript 
 	local script = Instance.new('LocalScript', JumpButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -562,8 +564,8 @@ local function HJMHJ_fake_script() -- JumpButton.LocalScript
 		UIS.JumpRequest:connect(onJumpRequest)
 	end)
 end
-coroutine.wrap(HJMHJ_fake_script)()
-local function HMSLHM_fake_script() -- Player2Button.LocalScript 
+coroutine.wrap(OHLSJEV_fake_script)()
+local function OCEFCN_fake_script() -- Player2Button.LocalScript 
 	local script = Instance.new('LocalScript', Player2Button)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -573,8 +575,8 @@ local function HMSLHM_fake_script() -- Player2Button.LocalScript
 		script.Parent.Parent.Player2.Visible = true
 	end)
 end
-coroutine.wrap(HMSLHM_fake_script)()
-local function UWLNSZ_fake_script() -- noclipButton.LocalScript 
+coroutine.wrap(OCEFCN_fake_script)()
+local function FBWULMO_fake_script() -- noclipButton.LocalScript 
 	local script = Instance.new('LocalScript', noclipButton)
 
 	local function UpdateText(Obj,strl)
@@ -609,8 +611,8 @@ local function UWLNSZ_fake_script() -- noclipButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UWLNSZ_fake_script)()
-local function TENXY_fake_script() -- creatorButton.LocalScript 
+coroutine.wrap(FBWULMO_fake_script)()
+local function SABVWK_fake_script() -- creatorButton.LocalScript 
 	local script = Instance.new('LocalScript', creatorButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -620,8 +622,8 @@ local function TENXY_fake_script() -- creatorButton.LocalScript
 		script.Parent.Parent.creator.Visible = true
 	end)
 end
-coroutine.wrap(TENXY_fake_script)()
-local function ZBVI_fake_script() -- SettingsButton.LocalScript 
+coroutine.wrap(SABVWK_fake_script)()
+local function PDAFWDU_fake_script() -- SettingsButton.LocalScript 
 	local script = Instance.new('LocalScript', SettingsButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -631,16 +633,16 @@ local function ZBVI_fake_script() -- SettingsButton.LocalScript
 		script.Parent.Parent.Settings.Visible = true
 	end)
 end
-coroutine.wrap(ZBVI_fake_script)()
-local function VKGB_fake_script() -- ExitButton.LocalScript 
+coroutine.wrap(PDAFWDU_fake_script)()
+local function BHBI_fake_script() -- ExitButton.LocalScript 
 	local script = Instance.new('LocalScript', ExitButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VKGB_fake_script)()
-local function EUZSBTP_fake_script() -- Frame.keyScript 
+coroutine.wrap(BHBI_fake_script)()
+local function UAYFWNU_fake_script() -- Frame.keyScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local plr = game.Players.LocalPlayer
@@ -651,8 +653,8 @@ local function EUZSBTP_fake_script() -- Frame.keyScript
 		end
 	end)
 end
-coroutine.wrap(EUZSBTP_fake_script)()
-local function AUQRWD_fake_script() -- SpeedGui.LocalScript 
+coroutine.wrap(UAYFWNU_fake_script)()
+local function SZIU_fake_script() -- SpeedGui.LocalScript 
 	local script = Instance.new('LocalScript', SpeedGui)
 
 	script.Parent.Frame.Visible = false
@@ -667,4 +669,4 @@ local function AUQRWD_fake_script() -- SpeedGui.LocalScript
 	wait(0.2)
 	script.Parent.Frame:TweenPosition(UDim2.new(0.373, 0,0.372, 0))
 end
-coroutine.wrap(AUQRWD_fake_script)()
+coroutine.wrap(SZIU_fake_script)()
