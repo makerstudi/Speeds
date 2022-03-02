@@ -16,7 +16,7 @@ local UICorner_4 = Instance.new("UICorner")
 --Properties:
 
 FlyScript.Name = "FlyScript"
-FlyScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+FlyScript.Parent = game.ServerStorage
 
 Frame.Parent = FlyScript
 Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -77,7 +77,7 @@ UICorner_4.Parent = TextButton2
 
 -- Scripts:
 
-local function IRDSDL_fake_script() -- Frame.Drag script 
+local function EQOXLOI_fake_script() -- Frame.Drag script 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Credits go to whoever made this script.
@@ -121,163 +121,95 @@ local function IRDSDL_fake_script() -- Frame.Drag script
 	drag(script.Parent)
 	
 end
-coroutine.wrap(IRDSDL_fake_script)()
-local function UUGWD_fake_script() -- FlyScript.FlyManager 
+coroutine.wrap(EQOXLOI_fake_script)()
+local function IHULN_fake_script() -- FlyScript.FlyManager 
 	local script = Instance.new('LocalScript', FlyScript)
 
+	script.parent.MouseButton1Down:connect(function()
+	    repeat wait() 
+	    until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+	    local mouse = game.Players.LocalPlayer:GetMouse() 
+	    repeat wait() until mouse
+	    local plr = game.Players.LocalPlayer 
+	    local torso = plr.Character.Head 
+	    local flying = false
+	    local deb = true 
+	    local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	    local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	    local maxspeed = 50 
+	    local speed = 0 
 	
-	
-	
-	local Key = "e" -- Lowercase Letter
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	local Player = game.Players.LocalPlayer
-	repeat wait() until Player.Character and Player.Character:FindFirstChild('Humanoid')
-	local Mouse = Player:GetMouse()
-	local IsFlying = false
-	local flyv
-	local flyg
-	local IsRunning = false
-	local f = 0
-	local Speed = 50
-	local LastSpeed = Speed
-	local maxspeed = 100
-	local wdown = false
-	local sdown = false
-	Mouse.KeyDown:Connect(function(key)
-		if key:lower() == Key then
-			if IsFlying then
-				IsFlying = false
-			    flyv:Destroy()
-				flyg:Destroy()
-				script.Parent.Frame.IsOn.Text = "Off"
-				script.Parent.Frame.IsOn.TextColor3 = Color3.fromRGB(255,0,0)
-				Player.Character:WaitForChild('Humanoid').PlatformStand = false
-			else
-				IsFlying = true
-				 flyv = Instance.new("BodyVelocity")
-				
-				flyv.Parent = Player.Character:FindFirstChild('Torso') or Player.Character:FindFirstChild('UpperTorso')
-				flyv.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
-				
-				 flyg = Instance.new("BodyGyro")
-				flyg.Parent = Player.Character:FindFirstChild('Torso') or Player.Character:FindFirstChild('UpperTorso')
-				flyg.MaxTorque = Vector3.new(9e9,9e9,9e9)
-				flyg.P = 1000
-				flyg.D = 50
-				script.Parent.Frame.IsOn.Text = "On"
-				script.Parent.Frame.IsOn.TextColor3 = Color3.fromRGB(0,255,0)
-				Player.Character:WaitForChild('Humanoid').PlatformStand = true
-			end
-		end
+	    function Fly() 
+	        local bg = Instance.new("BodyGyro", torso) 
+	        bg.P = 9e4 
+	        bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+	        bg.cframe = torso.CFrame 
+	        local bv = Instance.new("BodyVelocity", torso) 
+	        bv.velocity = Vector3.new(0,0.1,0) 
+	        bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+	        repeat wait() 
+	            plr.Character.Humanoid.PlatformStand = true 
+	            if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+	                speed = speed+.5+(speed/maxspeed) 
+	                if speed > maxspeed then 
+	                    speed = maxspeed 
+	                end 
+	            elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+	                speed = speed-1 
+	                if speed < 0 then 
+	                    speed = 0 
+	                end 
+	            end 
+	            if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+	                bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+	                lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+	            elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+	                bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+	            else 
+	                bv.velocity = Vector3.new(0,0.1,0) 
+	            end 
+	            bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+	        until not flying 
+	        ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	        lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	        speed = 0 
+	        bg:Destroy() 
+	        bv:Destroy() 
+	        plr.Character.Humanoid.PlatformStand = false 
+	    end 
+	    mouse.KeyDown:connect(function(key) 
+	        if key:lower() == "e" then 
+	            if flying then flying = false 
+	            else 
+	                flying = true 
+	                Fly() 
+	            end 
+	        elseif key:lower() == "w" then 
+	            ctrl.f = 1 
+	        elseif key:lower() == "s" then 
+	            ctrl.b = -1 
+	        elseif key:lower() == "a" then 
+	            ctrl.l = -1 
+	        elseif key:lower() == "d" then 
+	            ctrl.r = 1 
+	        end 
+	    end) 
+	    mouse.KeyUp:connect(function(key) 
+	        if key:lower() == "w" then 
+	            ctrl.f = 0 
+	        elseif key:lower() == "s" then 
+	            ctrl.b = 0 
+	        elseif key:lower() == "a" then 
+	            ctrl.l = 0 
+	        elseif key:lower() == "d" then 
+	            ctrl.r = 0 
+	        end 
+	    end)
+	    Fly()
 	end)
-	script.Parent.Frame.TextButton.MouseButton1Click:Connect(function()
-		
-			if IsFlying then
-				IsFlying = false
-				flyv:Destroy()
-				flyg:Destroy()
-			    script.Parent.Frame.IsOn.Text = "Off"
-			    script.Parent.Frame.IsOn.TextColor3 = Color3.fromRGB(255,0,0)
-				Player.Character:WaitForChild('Humanoid').PlatformStand = false
-			else
-				IsFlying = true
-				flyv = Instance.new("BodyVelocity")
-	
-			flyv.Parent = Player.Character:FindFirstChild('Torso') or Player.Character:FindFirstChild('UpperTorso')
-				flyv.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
-	
-				flyg = Instance.new("BodyGyro")
-			flyg.Parent = Player.Character:FindFirstChild('Torso') or Player.Character:FindFirstChild('UpperTorso')
-				flyg.MaxTorque = Vector3.new(9e9,9e9,9e9)
-				flyg.P = 1000
-				flyg.D = 50
-			script.Parent.Frame.IsOn.Text = "On"
-			script.Parent.Frame.IsOn.TextColor3 = Color3.fromRGB(0,255,0)
-			Player.Character:WaitForChild('Humanoid').PlatformStand = true
-			end
-	end)
-	script.Parent.Frame.TextButton2.FocusLost:Connect(function(Entered)
-		if Entered then
-			local BeginSpeed = tonumber(script.Parent.Frame.TextButton2.Text)
-			if BeginSpeed ~= nil then
-				Speed = BeginSpeed
-				print(BeginSpeed)
-			end
-		end	
-	end)
-	
-	
-	spawn(function()
-		while true do
-			wait()
-		if IsFlying then
-			
-				flyg.CFrame = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((f+0)*50*Speed/maxspeed),0,0) 
-					flyv.Velocity = workspace.CurrentCamera.CoordinateFrame.LookVector * Speed
-					wait(0.1)
-				
-				if Speed > maxspeed then
-					Speed = maxspeed
-					f = 1
-				else
-					f = 0
-				end
-					if Speed < 0 then
-					Speed = 0
-					f = 0
-				
-				end
-			
-			end
-			if IsRunning then
-			Speed = LastSpeed
-		else
-			if not Speed == 0 then
-				LastSpeed = Speed
-			end 
-			Speed = 0
-		end
-		end
-		
-		
-	end)
-	
-	Player.Character.Humanoid.Changed:Connect(function()
-		if Player.Character.Humanoid.Health == 0 then
-		if IsFlying then
-		IsFlying = false
-		flyg:Destroy()
-		flyv:Destroy()
-		end
-		end
-	end)
-	Player.Character.Humanoid.Changed:Connect(function(Prop)
-		
-			if Player.Character.Humanoid.MoveDirection == Vector3.new(0,0,0) then
-				IsRunning = false
-			else
-				IsRunning = true
-			end	
-	end)
-	
-	
-	
-	
-	
-	
-	
 end
-coroutine.wrap(UUGWD_fake_script)()
+coroutine.wrap(IHULN_fake_script)()
+
 
 local SpeedGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
