@@ -50,7 +50,7 @@ local ArrowButton_2 = Instance.new("ImageButton")
 --Properties:
 
 ExplsionGui.Name = "ExplsionGui"
-ExplsionGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ExplsionGui.Parent = game.CoreGui
 ExplsionGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ExplsionGui.DisplayOrder = 1000000000
 
