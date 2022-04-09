@@ -1,5 +1,3 @@
---c 이것의 저작권 소유자는 TW_ASVZ로 되있습니다.
-
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
