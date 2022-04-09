@@ -1,3 +1,5 @@
+--c 이것의 저작권 소유자는 TW_ASVZ로 되있습니다.
+
 game.StarterGui:SetCore("ChatMakeSystemMessage",{Text = "[AxolotlLogger] Loading Gun", Color = Color3.fromRGB(0, 38, 255), Font = Enum.Font.Cartoon})
 wait(1)
 game.StarterGui:SetCore("ChatMakeSystemMessage",{Text = "[AxolotlLogger] Download Script", Color = Color3.fromRGB(0, 38, 255), Font = Enum.Font.Cartoon})
